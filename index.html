@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drop Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero" aria-label="charity water style intro">
+            <div class="hero-content">
+                <img class="hero-logo" src="img/cw_logo-horizontal.png" alt="charity water logo">
+                <h1 class="hero-title">Turn Every Drop Into Impact</h1>
+                <p class="hero-copy">Catch clean water drops, dodge polluted ones, and see how quick action can change lives.</p>
+                <a class="hero-cta" href="#game">Play The Game</a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <img src="img/water-can-transparent.png" alt="">
+            </div>
+        </section>
+
+        <div class="game-wrapper" id="game">
+            <h2 class="game-title">Water Dropper Game</h2>
+            <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
+            <div class="score-panel">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="time">30</span>s</div>
+                <button id="start-btn">Start Game</button>
+                <button id="stop-btn" hidden>Stop Game</button>
+            </div>
+
+            <div id="game-container">
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
