@@ -205,6 +205,98 @@ body {
     font-weight: bold;
 }
 
+.mode-picker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+#difficulty-select {
+    border: 1px solid #cfc7b4;
+    background: #fffdf7;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+#difficulty-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.end-popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.end-popup[hidden] {
+    display: none;
+}
+
+.end-popup__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 20, 30, 0.55);
+    z-index: 0;
+}
+
+.end-popup__card {
+    position: relative;
+    z-index: 1;
+    width: min(560px, 100%);
+    border-radius: 16px;
+    border: 2px solid #111;
+    background: linear-gradient(165deg, #fffef8 0%, #ffffff 66%, #f1f9ff 100%);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+    padding: 24px 22px;
+}
+
+.end-popup__card h3 {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    margin-bottom: 12px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.end-popup__summary {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.end-popup__link {
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 2px solid #111;
+    background: var(--cw-yellow);
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#close-popup-btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 2px solid #111;
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .water-drop {
     position: absolute;
     width: 60px;
@@ -290,6 +382,12 @@ body {
     
     #game-container {
         height: 70vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .end-popup__card {
+        padding: 20px 16px;
     }
 }
 

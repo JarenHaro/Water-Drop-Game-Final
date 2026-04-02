@@ -26,6 +26,14 @@
             <div class="score-panel">
                 <div class="score">Score: <span id="score">0</span></div>
                 <div class="timer">Time: <span id="time">30</span>s</div>
+                <label class="mode-picker" for="difficulty-select">
+                    Mode:
+                    <select id="difficulty-select" aria-label="Select game difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </label>
                 <button id="start-btn">Start Game</button>
                 <button id="stop-btn" hidden>Stop Game</button>
             </div>
@@ -34,6 +42,33 @@
             </div>
         </div>
     </main>
+
+    <div id="end-popup" class="end-popup" hidden>
+        <div class="end-popup__backdrop" data-close-popup="true"></div>
+        <section
+            class="end-popup__card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="end-popup-title"
+        >
+            <h3 id="end-popup-title">Thanks for Playing for a Purpose</h3>
+            <p id="end-popup-summary" class="end-popup__summary"></p>
+            <p>
+                charity: water is a nonprofit organization bringing clean and safe
+                drinking water to people in developing countries. Every campaign helps
+                fund wells, filtration systems, and long-term local support.
+            </p>
+            <a
+                class="end-popup__link"
+                href="https://www.charitywater.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit charity: water
+            </a>
+            <button id="close-popup-btn" type="button">Close</button>
+        </section>
+    </div>
     
     <script src="script.js"></script>
 </body>
